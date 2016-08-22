@@ -16,13 +16,15 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -33,6 +35,10 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        Fragment fragment = new HomeFragment();
+        fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
     }
 
     @Override
@@ -75,20 +81,30 @@ public class MainActivity extends AppCompatActivity
         FragmentManager fragmentManager = getSupportFragmentManager();
 
         Fragment fragment = null;
+        String title = "";
 
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
             fragment = new CarteFragment();
+            title = "Cardápio";
             Toast.makeText(getApplicationContext(), "cardapio", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_home) {
+            fragment = new HomeFragment();
+            title = "Home";
+            Toast.makeText(getApplicationContext(), "home", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_history) {
             fragment = new HistoryFragment();
+            title = "Histórico";
             Toast.makeText(getApplicationContext(), "historico", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_share) {
+            title = "Compartilhe";
             Toast.makeText(getApplicationContext(), "share", Toast.LENGTH_SHORT).show();
         }
 
         fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+
+        toolbar.setTitle(title);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
