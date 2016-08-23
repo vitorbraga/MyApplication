@@ -50,7 +50,7 @@ public class HistoryFragment extends Fragment {
 
     @Override
     public void onResume() {
-        
+
         super.onResume();
 
         historyListView = (ListView) getView().findViewById(R.id.history_list);
