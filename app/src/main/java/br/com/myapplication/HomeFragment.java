@@ -13,7 +13,7 @@ import android.widget.Button;
 
 public class HomeFragment extends Fragment {
 
-    private Button mMapsButton;
+    private Button mMapsButton, mCarteButton;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -46,6 +46,17 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mCarteButton = (Button) getView().findViewById(R.id.carte_button);
+
+        mCarteButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), CarteActivity.class);
                 startActivity(intent);
             }
         });

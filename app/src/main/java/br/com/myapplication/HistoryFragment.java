@@ -77,7 +77,6 @@ public class HistoryFragment extends Fragment {
 
             @Override
             public void failure(RetrofitError error) {
-                Toast.makeText(getActivity(), "failure", Toast.LENGTH_SHORT).show();
             }
         });
     }

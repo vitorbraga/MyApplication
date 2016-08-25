@@ -9,4 +9,25 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_maps">Map</string>
+
+    <string-array name="image_ids">
+        <item>@drawable/food_1</item>
+        <item>@drawable/food_2</item>
+        <item>@drawable/food_3</item>
+        <item>@drawable/food_4</item>
+        <item>@drawable/food_5</item>
+        <item>@drawable/food_6</item>
+        <item>@drawable/food_7</item>
+        <item>@drawable/food_8</item>
+        <item>@drawable/food_9</item>
+        <item>@drawable/food_1</item>
+        <item>@drawable/food_2</item>
+        <item>@drawable/food_3</item>
+        <item>@drawable/food_4</item>
+        <item>@drawable/food_5</item>
+        <item>@drawable/food_6</item>
+        <item>@drawable/food_7</item>
+        <item>@drawable/food_8</item>
+        <item>@drawable/food_9</item>
+    </string-array>
 </resources>

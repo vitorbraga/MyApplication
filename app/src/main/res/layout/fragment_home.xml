@@ -1,13 +1,9 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="br.com.myapplication.HomeFragment">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home" />
 
     <Button
         android:id="@+id/maps_button"
@@ -15,4 +11,10 @@
         android:layout_height="wrap_content"
         android:text="Abrir maps"/>
 
-</FrameLayout>
+    <Button
+        android:id="@+id/carte_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Abrir cardapio"/>
+
+</LinearLayout>

@@ -1,6 +1,7 @@
 package br.com.myapplication;
 
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private Toolbar toolbar;
+    private CollapsingToolbarLayout collapse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,8 @@ public class MainActivity extends AppCompatActivity
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        collapse = (CollapsingToolbarLayout) findViewById(R.id.collapse_toolbar);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -88,23 +92,21 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_camera) {
             fragment = new CarteFragment();
             title = "Cardápio";
-            Toast.makeText(getApplicationContext(), "cardapio", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_home) {
             fragment = new HomeFragment();
-            title = "Home";
-            Toast.makeText(getApplicationContext(), "home", Toast.LENGTH_SHORT).show();
+            title = "My Application";
         } else if (id == R.id.nav_history) {
             fragment = new HistoryFragment();
             title = "Histórico";
-            Toast.makeText(getApplicationContext(), "historico", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_share) {
             title = "Compartilhe";
-            Toast.makeText(getApplicationContext(), "share", Toast.LENGTH_SHORT).show();
+            fragment = new CarteFragment();
         }
 
         fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
 
-        toolbar.setTitle(title);
+        toolbar.setSubtitle("Um novo mundo");
+        collapse.setTitle(title);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
