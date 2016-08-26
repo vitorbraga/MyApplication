@@ -17,4 +17,17 @@
         android:layout_height="wrap_content"
         android:text="Abrir cardapio"/>
 
+    <Button
+        android:id="@+id/penguin_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Penguin"/>
+
+    <Button
+        android:id="@+id/tab_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tab"/>
+
+
 </LinearLayout>

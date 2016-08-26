@@ -13,7 +13,7 @@ import android.widget.Button;
 
 public class HomeFragment extends Fragment {
 
-    private Button mMapsButton, mCarteButton;
+    private Button mMapsButton, mCarteButton, mPenguinButton, mTabButton;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -57,6 +57,28 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), CarteActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mPenguinButton = (Button) getView().findViewById(R.id.penguin_button);
+
+        mPenguinButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), PenguinActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mTabButton = (Button) getView().findViewById(R.id.tab_button);
+
+        mTabButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), TabActivity.class);
                 startActivity(intent);
             }
         });
