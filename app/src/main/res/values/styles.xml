@@ -20,4 +20,16 @@
     <style name="CollapseToolbarAppearance">
         <item name="android:textColorPrimary">@color/white</item>
     </style>
+
+    <style name="TinderActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimaryDark">#cc0986ff</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="titleTextColor">@color/tinder_red</item>
+        <item name="android:textColorPrimary">@color/tinder_red</item>
+        <item name="android:editTextColor">@android:color/background_dark</item>
+        <item name="android:textColor">@android:color/background_dark</item>
+        <item name="colorControlNormal">@android:color/background_dark</item>
+        <item name="colorControlActivated">#ff0043c5</item>
+        <item name="colorControlHighlight">#ffcb6345</item>
+    </style>
 </resources>

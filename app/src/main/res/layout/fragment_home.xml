@@ -1,33 +1,38 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="br.com.myapplication.HomeFragment">
 
     <Button
         android:id="@+id/maps_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Abrir maps"/>
+        android:text="Abrir maps" />
 
     <Button
         android:id="@+id/carte_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Abrir cardapio"/>
+        android:text="Abrir cardapio" />
 
     <Button
         android:id="@+id/penguin_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Penguin"/>
+        android:text="Penguin" />
 
     <Button
         android:id="@+id/tab_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tab"/>
+        android:text="Tab" />
 
+    <Button
+        android:id="@+id/tinder_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tinder"/>
 
 </LinearLayout>

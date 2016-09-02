@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:weightSum="1"
+    tools:context="br.com.myapplication.TinderActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:adjustViewBounds="true"
+        android:background="@drawable/photo_radius"
+        android:orientation="vertical"
+        android:padding="1dp">
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:background="@drawable/photo_radius2"
+            android:scaleType="fitXY"
+            android:src="@drawable/photo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/texts_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.03"
+        android:background="@drawable/bottom_radius"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:paddingLeft="20dp">
+
+        <TextView
+            android:id="@+id/name_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chloe, 26"
+            android:textColor="@color/tinder_dark_grey"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/job"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Marketing Design at Tinder"
+            android:textColor="@color/tinder_light_grey" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttons_container"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.27"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="-10dp"
+            android:background="@drawable/tinder_circle_linearlayout"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/button_refresh"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/tinder_circle_button"
+                android:src="@drawable/ic_history_black"
+                android:tint="#fdce66" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="-5dp"
+            android:background="@drawable/tinder_circle_linearlayout"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/button_regret"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/tinder_circle_button"
+                android:src="@drawable/ic_clear_black_24dp"
+                android:tint="#ff6b6b" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="-5dp"
+            android:background="@drawable/tinder_circle_linearlayout"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/button_accept"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/tinder_circle_button"
+                android:src="@drawable/ic_favorite_black_24dp"
+                android:tint="#4ccc93" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="-10dp"
+            android:background="@drawable/tinder_circle_linearlayout"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/button_star"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/tinder_circle_button"
+                android:src="@drawable/ic_grade_black_24dp"
+                android:tint="#2cb3c7" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
