@@ -35,4 +35,11 @@
         android:layout_height="wrap_content"
         android:text="Tinder"/>
 
+
+    <Button
+        android:id="@+id/material_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Material"/>
+
 </LinearLayout>

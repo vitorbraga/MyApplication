@@ -13,6 +13,16 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="AppTheme.Material" parent="android:Theme.Material.Light">
+        <!-- theme customizations -->
+        <!--   your app branding color for the app bar -->
+        <item name="android:textColorPrimary">@color/tinder_red</item>
+        <item name="android:colorPrimary">@color/white</item>
+        <!--   darker variant for the status bar and contextual app bars -->
+        <item name="android:colorPrimaryDark">@color/black</item>
+        <!--   theme UI controls like checkboxes and text fields -->
+    </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
